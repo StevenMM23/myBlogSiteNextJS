@@ -1,4 +1,5 @@
 import FeaturedPost from "@/components/home-page/featured-posts";
+import Footer from "@/components/home-page/footer";
 import Hero from "@/components/home-page/hero";
 import { getFeaturedPosts } from "@/lib/posts-util";
 
@@ -19,6 +20,8 @@ export default function HomePage(props) {
 
       <Hero />
       <FeaturedPost posts={props.posts} />
+      <Footer/>
+      
     </>
   );
 }

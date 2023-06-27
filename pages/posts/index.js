@@ -3,14 +3,18 @@ import AllPosts from "@/components/posts/all-posts";
 import React, { Fragment } from "react";
 import { getAllPosts } from "@/lib/posts-util";
 import Head from "next/head";
+import Footer from "@/components/home-page/footer";
 
 const AllPostPage = (props) => {
   return (
     <Fragment>
-    <Head>
-      <title>All Post</title>
-      <meta name="description" content="A list of all programming-related tutorials and posts!"/>
-    </Head>
+      <Head>
+        <title>All Post</title>
+        <meta
+          name="description"
+          content="A list of all programming-related tutorials and posts!"
+        />
+      </Head>
       <AllPosts posts={props.posts} />
     </Fragment>
   );
