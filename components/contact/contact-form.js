@@ -21,7 +21,7 @@ const ContactFrom = () => {
   }
   return (
     <section className={classes.contact}>
-      <h1>Queremos escuchaste</h1>
+      <h1>Queremos escucharte</h1>
       <form onSubmit={sendMessageHandler} className={classes.form}>
         <div className={classes.controls}>
           <div className={classes.control}>

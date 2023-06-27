@@ -12,7 +12,7 @@ const Hero = () => {
           height={300}
         />
       </div>
-      <h1 className={classes.h1}>Economia Bog</h1>
+      <h1 className={classes.h1}>Economia Blog</h1>
       <p className={classes.p}>
         Bienvenido al blog de <b>Economia</b> que te llevará a conocer todas
         esas noticias sobre el mundo financiero. Aprende, crece y alcanza la
