@@ -25,7 +25,7 @@ const ContactFrom = () => {
       <form onSubmit={sendMessageHandler} className={classes.form}>
         <div className={classes.controls}>
           <div className={classes.control}>
-            <label htmlFor="email">Correo electronico</label>
+            <label htmlFor="email">Correo electrónico</label>
             <input
               type="email"
               id="email"
