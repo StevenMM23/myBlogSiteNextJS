@@ -1,9 +1,9 @@
 ---
-title: 'Testing Post'
-date: '2023-06-9'
+title: "Testing Post"
+date: "2023-06-9"
 image: prestamo-hipotecari.jpg
 excerpt: Esta es mi descripcion de afuera en testing post
-isFeatured: false
+isFeatured: true
 ---
 
 Este es mi texto dentro del Post
