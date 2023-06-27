@@ -9,7 +9,7 @@ export default function HomePage(props) {
   return (
     <>
       <Head>
-        <title>Economia Blog</title>
+        <title>Economía Blog</title>
         <meta
           name="description"
           content="I post about programming and web development"
@@ -20,8 +20,7 @@ export default function HomePage(props) {
 
       <Hero />
       <FeaturedPost posts={props.posts} />
-      <Footer/>
-      
+      <Footer />
     </>
   );
 }
