@@ -12,10 +12,10 @@ const MainNavegation = () => {
       <nav>
         <ul>
           <li>
-            <Link href={"/posts"}>Posts</Link>
+            <Link href={"/posts"}>Publicaciones</Link>
           </li>
           <li>
-            <Link href={"/contact"}>Contact</Link>
+            <Link href={"/contact"}>Contactos</Link>
           </li>
         </ul>
       </nav>

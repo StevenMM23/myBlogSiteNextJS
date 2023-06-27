@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./logo.module.css";
 const Logo = () => {
-  return <div className={classes.Logo}>Steven Next Blog</div>;
+  return <div className={classes.Logo}>Economia Blog</div>;
 };
 
 export default Logo;
