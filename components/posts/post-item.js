@@ -17,7 +17,7 @@ const PostItems = (props) => {
     <li className={classes.post}>
       <Link href={linkPath}>
         <div className={classes.image}>
-          <Image src={imagePath} alt={title} width={500} height={400}  />
+          <Image src={imagePath} alt={title} width={600} height={400}  />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>
