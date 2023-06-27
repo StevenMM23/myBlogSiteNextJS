@@ -8,8 +8,8 @@ const Hero = () => {
         <Image
           src="/images/site/myImage.png"
           alt="An Image showing Steven"
-          width={300}
-          height={300}
+          width={800}
+          height={800}
         />
       </div>
       <h1 className={classes.h1}>Economia Blog</h1>
