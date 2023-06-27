@@ -4,7 +4,7 @@ import { PostsGrids } from "../posts/posts-grid";
 const FeaturedPost = (props) => {
   return (
     <section className={classes.latest}>
-      <h2>Featured Post</h2>
+      <h2>Publicaciones Destacadas</h2>
       <PostsGrids posts={props.posts} />
     </section>
   );
