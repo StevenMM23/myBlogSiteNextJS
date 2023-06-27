@@ -21,11 +21,11 @@ const ContactFrom = () => {
   }
   return (
     <section className={classes.contact}>
-      <h1>How can I help you</h1>
+      <h1>Queremos escuchaste</h1>
       <form onSubmit={sendMessageHandler} className={classes.form}>
         <div className={classes.controls}>
           <div className={classes.control}>
-            <label htmlFor="email">Your Email</label>
+            <label htmlFor="email">Correo electronico</label>
             <input
               type="email"
               id="email"
@@ -36,7 +36,7 @@ const ContactFrom = () => {
             />
           </div>
           <div className={classes.control}>
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="name">Nombre completo</label>
             <input
               type="text"
               id="name"
@@ -46,7 +46,7 @@ const ContactFrom = () => {
           </div>
         </div>
         <div className={classes.control}>
-          <label htmlFor="message">Your Message</label>
+          <label htmlFor="message">Deja un comentario sobre el Blog</label>
           <textarea
             id="message"
             rows={5}
@@ -55,7 +55,7 @@ const ContactFrom = () => {
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Send Message</button>
+          <button>Enviar</button>
         </div>
       </form>
     </section>

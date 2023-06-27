@@ -8,7 +8,7 @@ export default function HomePage(props) {
   return (
     <>
       <Head>
-        <title>Steven Blog</title>
+        <title>Economia Blog</title>
         <meta
           name="description"
           content="I post about programming and web development"
