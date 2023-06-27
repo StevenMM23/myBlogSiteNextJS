@@ -15,7 +15,7 @@ const MainNavegation = () => {
             <Link href={"/posts"}>Publicaciones</Link>
           </li>
           <li>
-            <Link href={"/contact"}>Contactanos</Link>
+            <Link href={"/contact"}>Contáctanos</Link>
           </li>
         </ul>
       </nav>
