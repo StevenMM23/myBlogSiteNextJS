@@ -12,16 +12,6 @@ function PostContent(props) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
 
   const customRenderers = {
-    // img(image) {
-    //   return (
-    //     <Image
-    //       src={`/images/posts/${post.slug}/${image.src}`}
-    //       alt={image.alt}
-    //       width={600}
-    //       height={300}
-    //     />
-    //   );
-    // },
     p(paragraph) {
       const { node } = paragraph;
 
@@ -29,7 +19,7 @@ function PostContent(props) {
         const image = node.children[0];
 
         return (
-          <div className={classes.image}>
+          <div className={classes.image} data-testid="post-content-image">
             <Image
               src={`/images/posts/${post.slug}/${image.properties.src}`}
               alt={image.alt}
@@ -40,13 +30,18 @@ function PostContent(props) {
         );
       }
 
-      return <p>{paragraph.children}</p>;
+      return <p data-testid="post-content-paragraph">{paragraph.children}</p>;
     },
 
     code({ node, inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || "");
       return !inline && match ? (
-        <SyntaxHighlighter language={match[1]} PreTag="div" {...props}>
+        <SyntaxHighlighter
+          language={match[1]}
+          PreTag="div"
+          {...props}
+          data-testid="post-content-syntax-highlighter"
+        >
           {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
       ) : (
@@ -58,9 +53,11 @@ function PostContent(props) {
   };
 
   return (
-    <article className={classes.content}>
+    <article className={classes.content} data-testid="post-content">
       <PostHeader title={post.title} image={imagePath} />
-      <ReactMarkdown components={customRenderers}>{post.content}</ReactMarkdown>
+      <ReactMarkdown components={customRenderers} data-testid="react-markdown">
+        {post.content}
+      </ReactMarkdown>
     </article>
   );
 }

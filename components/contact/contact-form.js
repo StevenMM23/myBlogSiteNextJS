@@ -1,9 +1,11 @@
-import React, { use, useState } from "react";
+import React, { useState } from "react";
 import classes from "./contact-form.module.css";
-const ContactFrom = () => {
+
+const ContactForm = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredName, setEnteredName] = useState("");
   const [enteredMessage, setEnteredMessage] = useState("");
+
   function sendMessageHandler(e) {
     e.preventDefault();
 
@@ -19,8 +21,9 @@ const ContactFrom = () => {
       },
     });
   }
+
   return (
-    <section className={classes.contact}>
+    <section className={classes.contact} data-testid="contact-form">
       <h1>Queremos escucharte</h1>
       <form onSubmit={sendMessageHandler} className={classes.form}>
         <div className={classes.controls}>
@@ -33,6 +36,7 @@ const ContactFrom = () => {
               onChange={(e) => {
                 setEnteredEmail(e.target.value);
               }}
+              data-testid="email-input"
             />
           </div>
           <div className={classes.control}>
@@ -42,6 +46,7 @@ const ContactFrom = () => {
               id="name"
               required
               onChange={(e) => setEnteredName(e.target.value)}
+              data-testid="name-input"
             />
           </div>
         </div>
@@ -52,14 +57,15 @@ const ContactFrom = () => {
             rows={5}
             required
             onChange={(e) => setEnteredMessage(e.target.value)}
+            data-testid="message-textarea"
           ></textarea>
         </div>
         <div className={classes.actions}>
-          <button>Enviar</button>
+          <button data-testid="submit-button">Enviar</button>
         </div>
       </form>
     </section>
   );
 };
 
-export default ContactFrom;
+export default ContactForm;

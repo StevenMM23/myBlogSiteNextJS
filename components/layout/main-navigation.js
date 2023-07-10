@@ -3,19 +3,20 @@ import Link from "next/link";
 
 import classes from "./main-navigation.module.css";
 import Logo from "./logo";
-const MainNavegation = () => {
+
+const MainNavigation = () => {
   return (
-    <header className={classes.header}>
+    <header className={classes.header} data-testid="main-navigation">
       <Link href={"/"}>
         <Logo />
       </Link>
       <nav>
-        <ul>
+        <ul data-testid="navigation-list">
           <li>
-            <Link href={"/posts"}>Publicaciones</Link>
+            <Link href={"/posts"} data-testid="posts-link">Publicaciones</Link>
           </li>
           <li>
-            <Link href={"/contact"}>Contáctanos</Link>
+            <Link href={"/contact"} data-testid="contact-link">Contáctanos</Link>
           </li>
         </ul>
       </nav>
@@ -23,4 +24,4 @@ const MainNavegation = () => {
   );
 };
 
-export default MainNavegation;
+export default MainNavigation;

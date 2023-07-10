@@ -1,12 +1,20 @@
 import React from "react";
 import classes from "./footer.module.css";
+
 const Footer = () => {
   return (
-    <div>
+    <footer data-testid="footer">
       <div className={classes.footer}>
-        Todos los articulos subidos son parte de https://eldinero.com.do
+        Todos los artículos subidos son parte de{" "}
+        <a
+          href="https://eldinero.com.do"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://eldinero.com.do
+        </a>
       </div>
-    </div>
+    </footer>
   );
 };
 
