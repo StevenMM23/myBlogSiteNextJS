@@ -4,19 +4,19 @@ import Hero from "@/components/home-page/hero";
 import Footer from "@/components/home-page/footer";
 
 describe("Hero", () => {
-  test("renders the image", () => {
+  test("Renderizar La imagen", () => {
     const { getByAltText } = render(<Hero />);
     const image = getByAltText("An Image showing Steven");
     expect(image).toBeInTheDocument();
   });
 
-  test("renders the heading", () => {
+  test("Renderizar el Heading", () => {
     const { getByText } = render(<Hero />);
     const heading = getByText("Economía Blog");
     expect(heading).toBeInTheDocument();
   });
 
-  test('renders "Economía Blog" within an h1 element', () => {
+  test('Validando que el texto "Economia Blog" este en un Heading 1', () => {
     const { getByRole } = render(<Hero />);
     const heading = getByRole("heading", { level: 1, name: /economía blog/i });
 
@@ -25,7 +25,7 @@ describe("Hero", () => {
 });
 
 describe("Footer", () => {
-  test('validates the link to "https://eldinero.com.do"', () => {
+  test('Validar que el Link "https://eldinero.com.do" este en un href', () => {
     const { getByText } = render(<Footer />);
     const linkElement = getByText("https://eldinero.com.do");
 
